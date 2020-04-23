@@ -11,3 +11,6 @@ add_library(average_shortest_path
         ${SOURCE_HEADERS}
         )
 
+# Tests
+add_subdirectory(tests)
+

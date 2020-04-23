@@ -24,12 +24,3 @@ target_link_libraries(tests
         gtest_main
         average_shortest_path
         )
-
-# TODO: fix
-#target_include_directories(tests PUBLIC
-#        ${PROJECT_SOURCE_DIR}/src/
-#        ${CMAKE_SOURCE_DIR}/src/
-#        ${PROJECT_SOURCE_DIR}/src/
-#        ../src/
-#
-#        )

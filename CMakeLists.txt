@@ -11,6 +11,9 @@ add_library(average_shortest_path
         ${SOURCE_HEADERS}
         )
 
+target_include_directories(average_shortest_path INTERFACE
+        ${PROJECT_SOURCE_DIR}/src
+        )
+
 # Tests
 add_subdirectory(tests)
-

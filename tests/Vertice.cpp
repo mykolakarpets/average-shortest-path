@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../src/Vertice.h" // TODO: fix
+#include "Vertice.h"
 
 class VerticeTest: public ::testing::Test {
 protected:

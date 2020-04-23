@@ -9,7 +9,6 @@
 #include <functional>
 
 #include "Canvas.h"
-
 #include "Vertice.h"
 #include "Edge.h"
 

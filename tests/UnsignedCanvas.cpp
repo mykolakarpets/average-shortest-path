@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../src/UnsignedCanvas.h" //TODO: fix
+#include "UnsignedCanvas.h"
 
 class UnsignedCanvasTest: public ::testing::Test {
 protected:

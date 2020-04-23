@@ -4,8 +4,8 @@
 
 #include <gtest/gtest.h>
 
-#include "../src/Vertice.h" // TODO: fix
-#include "../src/Edge.h" // TODO: fix
+#include "Vertice.h"
+#include "Edge.h"
 
 class EdgeTest: public ::testing::Test {
 protected:

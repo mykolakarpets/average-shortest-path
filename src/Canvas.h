@@ -14,8 +14,8 @@
 template<typename VValue, typename EValue>
 class Canvas {
 public:
-    using VerticesPtrList = std::list<std::shared_ptr<Vertice<VValue>>>;
-    using EdgesPtrList = std::list<std::shared_ptr<Edge<Vertice<VValue>, EValue>>>;
+    typedef std::list<std::shared_ptr<Vertice<VValue>>> VerticesPtrList;
+    typedef std::list<std::shared_ptr<Edge<Vertice<VValue>, EValue>>> EdgesPtrList;
 
     virtual Vertice<VValue>& add_vertice(Vertice<VValue> v) = 0;
     virtual Edge<Vertice<VValue>, EValue>& add_edge(Edge<Vertice<VValue>, EValue> e) = 0;

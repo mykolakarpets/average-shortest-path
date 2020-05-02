@@ -36,3 +36,10 @@ TEST_F(EdgeTest, int_value_get_set) {
 
     ASSERT_EQ(e.get_value(), new_value);
 }
+
+TEST_F(EdgeTest, get_another_vertice) {
+    EdgeType e(v0, v1, edge_value);
+
+    ASSERT_EQ(e.get_another_vertice(v0), v1);
+    ASSERT_EQ(e.get_another_vertice(v1), v0);
+}

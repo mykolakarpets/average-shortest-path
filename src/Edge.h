@@ -23,6 +23,8 @@ public:
 
     VerticePtrPair get_vertices() { return std::make_pair(_v1, _v2); };
 
+    VPtr get_another_vertice(std::shared_ptr<Vertice> v) { return _v1 == v ? _v2 : _v1; }
+
 private:
     VPtr _v1, _v2;
     Value _value;

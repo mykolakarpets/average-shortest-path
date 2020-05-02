@@ -34,7 +34,7 @@ TEST_F(UnsignedCanvasTest, add_edge) {
     auto vertices_list = canvas.get_vertices();
 
     EdgeValueType edge_value = 20;
-    EdgeType edge(std::make_pair(*vertices_list.begin(), *vertices_list.begin()++), edge_value);
+    EdgeType edge(*vertices_list.begin(), *vertices_list.begin()++, edge_value);
 
     ASSERT_EQ(canvas.get_edges().size(), 0);
 

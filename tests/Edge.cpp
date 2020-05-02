@@ -22,14 +22,14 @@ protected:
 };
 
 TEST_F(EdgeTest, create) {
-    EdgeType e(EdgeType::VerticePtrPair(v0, v1), edge_value);
+    EdgeType e(v0, v1, edge_value);
 
-    ASSERT_EQ(e.get_vertices(), std::make_pair(std::shared_ptr<VerticeType>(v0), std::shared_ptr<VerticeType>(v1)));
+    ASSERT_EQ(e.get_vertices(), std::make_pair(v0, v1));
     ASSERT_EQ(e.get_value(), edge_value);
 }
 
 TEST_F(EdgeTest, int_value_get_set) {
-    EdgeType e(std::make_pair(v0, v1), edge_value);
+    EdgeType e(v0, v1, edge_value);
     EdgeValueType new_value = 21;
 
     e.set_value(new_value);

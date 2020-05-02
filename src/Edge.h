@@ -12,18 +12,19 @@
 template<typename Vertice, typename Value>
 class Edge {
 public:
-    typedef std::pair<std::shared_ptr<Vertice>, std::shared_ptr<Vertice>> VerticePtrPair;
+    typedef std::shared_ptr<Vertice> VPtr;
+    typedef std::pair<VPtr, VPtr> VerticePtrPair;
 
     Edge() = delete;
-    Edge(VerticePtrPair vertices, Value value = {}): _vertices(std::move(vertices)), _value(value) {};
+    explicit Edge(VPtr v1, VPtr v2, Value value = {}) : _v1(v1), _v2(v2), _value(value) {};
 
     Value get_value() { return _value; }
     void set_value(Value value) { this->_value = value; }
 
-    VerticePtrPair get_vertices() { return _vertices; };
+    VerticePtrPair get_vertices() { return std::make_pair(_v1, _v2); };
 
 private:
-    VerticePtrPair _vertices;
+    VPtr _v1, _v2;
     Value _value;
 };
 

@@ -2,12 +2,11 @@
 // Created by mkarpetsp on 19.04.20.
 //
 // Requirements for Graph class:
-//      * create from a list of vertices, from matrix, from file (GraphML)?
+//      * create from a list of vertices (+edges), from matrix, from file (GraphML)?
 //      * get a number of vertices/edges
 //      * check whether edges are adjacent
 //      * list all the edges of a vertice
 //      * add/delete an edge
-//      * assign a value to an edge/vertice
 //
 //      Canvas
 

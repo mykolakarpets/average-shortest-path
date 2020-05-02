@@ -38,6 +38,7 @@ protected:
 
     std::shared_ptr<UnsignedCanvas> canvas = std::make_shared<UnsignedCanvas>();
 
+    // TODO: Make a part of canvas
     VValue v_ids[5] = {0, 1, 2, 3, 4};
     std::vector<VPtr> v_arr;
     std::list<VPtr> v_list;

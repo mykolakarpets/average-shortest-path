@@ -63,6 +63,16 @@ TEST_F(GraphTest, add_edge) {
     EXPECT_TRUE(g->adjacent(v_arr[0], v_arr[2]));
 }
 
+TEST_F(GraphTest, remove_edge) {
+    EXPECT_TRUE(g->remove_edge(e_arr[0]));
+
+    // Edge already removed
+    EXPECT_FALSE(g->remove_edge(e_arr[0]));
+
+    // Vertices no longer connected
+    EXPECT_FALSE(g->adjacent(v_arr[0], v_arr[2]));
+}
+
 TEST_F(GraphTest, adjacent) {
     EXPECT_TRUE(g->adjacent(v_arr[0], v_arr[1]));
     EXPECT_TRUE(g->adjacent(v_arr[2], v_arr[3]));

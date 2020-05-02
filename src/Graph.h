@@ -40,6 +40,9 @@ public:
     // Returns false if given edge is already a part of the graph
     bool add_edge(EPtr edge);
 
+    // Returns false if an edge is not a part of the graph
+    bool remove_edge(EPtr edge);
+
     size_t num_vervices();
 //    void num_edges();
 

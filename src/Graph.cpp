@@ -2,6 +2,8 @@
 // Created by mkarpets on 19.04.20.
 //
 
+#include <algorithm>
+
 #include "Graph.h"
 
 template<typename VValue, typename EValue>
@@ -40,6 +42,24 @@ bool Graph<VValue, EValue>::add_edge(EPtr edge) {
     v2_edges_list.push_back(edge);
 
     //TODO: matrix
+
+    return true;
+}
+
+template<typename VValue, typename EValue>
+bool Graph<VValue, EValue>::remove_edge(Graph::EPtr edge) {
+    auto [v1, v2] = edge->get_vertices();
+
+    EPtrList& v1_edges_list = _vertices[v1];
+    EPtrList& v2_edges_list = _vertices[v2];
+
+    if (std::find(v1_edges_list.begin(), v1_edges_list.end(), edge) == v1_edges_list.end()
+            or std::find(v2_edges_list.begin(), v2_edges_list.end(), edge) == v2_edges_list.end()) {
+        return false;
+    }
+
+    v1_edges_list.remove(edge);
+    v2_edges_list.remove(edge);
 
     return true;
 }
